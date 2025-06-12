@@ -1,14 +1,5 @@
 'use strict';
 
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// BANKIST APP
-
-/////////////////////////////////////////////////
-// Data
-
-// DIFFERENT DATA! Contains movement dates, currency and locale
-
 const account1 = {
   owner: 'Jonas Schmedtmann',
   movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
@@ -98,9 +89,6 @@ const displayMovements = function (acc, sort = false) {
     movs = acc.movements;
     movsdate = acc.movementsDates;
   }
-  // const movs = sort
-  //   ? acc.movements.slice().sort((a, b) => a - b)
-  //   : acc.movements;
 
   movs.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
@@ -315,14 +303,3 @@ btnSort.addEventListener('click', function (e) {
   sorted = !sorted;
 });
 
-// setInterval(function () {
-//   const now = new Date();
-//   const hour = now.getHours();
-//   const minute = `${now.getMinutes()}`.padStart(2, 0);
-//   const second = `${now.getSeconds()}`.padStart(2, 0);
-//   labelWelcome.textContent = `${hour}: ${minute}: ${second}`;
-// }, 1000);
-
-/////////////////////////////////////////////////
-/////////////////////////////////////////////////
-// LECTURES
